@@ -17,5 +17,10 @@ public class CustomFilter extends OncePerRequestFilter {
     protected void doFilterInternal(HttpServletRequest request, HttpServletResponse response, FilterChain filterChain) throws ServletException, IOException {
         log.info("============================");
         log.info("[CoreLib] CustomFilter start");
+
+        // 다음 필터나 컨트롤러로 요청을 전달
+        filterChain.doFilter(request, response);
+
+        log.info("[CoreLib] CustomFilter end");
     }
 }
