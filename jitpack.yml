@@ -4,8 +4,7 @@ jdk:
 before_install:
   - sdk install java 17.0.2-zulu
   - sdk use java 17.0.2-zulu
-  - sdk install maven
-  - mvn -v
+  - chmod +x ./gradlew   # gradlew에 실행 권한 부여
 
 install:
   - ./gradlew build publishToMavenLocal
