@@ -7,4 +7,4 @@ before_install:
   - chmod +x ./gradlew   # gradlew에 실행 권한 부여
 
 install:
-  - ./gradlew build publishToMavenLocal
+  - ./gradlew build
